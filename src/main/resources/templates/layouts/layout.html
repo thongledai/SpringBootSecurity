@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="head(title)">
+<html lang="vi"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title th:text="${title}">IOTSTAR SHOP</title>
+	<title layout:title-pattern="$CONTENT_TITLE - UTEShop">Shop</title>
 	<link rel="stylesheet" th:href="@{/css/app.css}">
 </head>
+<body>
+<header th:replace="~{fragments/header :: header}"></header>
+<div class="container">
+	<main layout:fragment="content"></main>
+</div>
+<footer class="footer">Footer của trang chủ</footer>
+</body>
 </html>
