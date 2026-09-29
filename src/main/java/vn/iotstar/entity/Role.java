@@ -20,12 +20,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @Builder
 public class Role {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	@Column(nullable = false, unique = true, length = 50)
+	@Column(nullable = false, unique = false, length = 30)
 	private String name;
-
 }

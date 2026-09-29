@@ -7,7 +7,6 @@ import org.springframework.web.filter.CharacterEncodingFilter;
 
 @Configuration
 public class EncodingConfig {
-
 	@Bean
 	FilterRegistrationBean<CharacterEncodingFilter> characterEncodingFilter() {
 		CharacterEncodingFilter filter = new CharacterEncodingFilter();
@@ -17,5 +16,4 @@ public class EncodingConfig {
 		registration.setOrder(Integer.MIN_VALUE);
 		return registration;
 	}
-
 }
